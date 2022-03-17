@@ -34,12 +34,19 @@ Content filtering, on the other hand, focuses exclusively on either the item or 
 The intersection of row and column shows the rating of the leanring unit given by that user (see the above image). For example user-1 has given 2.5 rating for the course-2. The Nan values are representing that the rating has not given by that user for that particular leanring unit. We replaced the Nan values by 0. 
     
 We further tried to analyse, how the user voted for each course and their vote frequency. We can put the threhold to minimize the number of users (for example, we can consider only those users who have voted at least 8 times and the similarly minimize the number of courses by defining the constraint over the minimum rating for the course. The read line in the graphs represents these thresholds.
-![Dataset Representation](images/course_vs_votes.png)
-![Dataset Representation](images/users_vote_frequency.png)
+![Course vs number of ratings](images/course_vs_votes.png)
+![User vs vote frequency](images/users_vote_frequency.png)
 
-
-
+### Users behaviour
+We created a 3D scatter plot to see how user's background is positioned with respect to each other. The red dots are represeting the user in the 3D space, while the number represents the user id. For example user "maria.franke@peers-solutions.com" has user id "1", user "melanie.krahl@peers-solutions.com" has user id "2" and so on.
+We can see a overlap on red dots and the numbers, this shows that two users shares the same industry, position and department.
+The test users (who are not enrolled in the system) is represented by green square.
+For the test users, if they don't fall into the existing industries, positions and departements then we use 0, rather than assigning the respective value.
+![User behaviour analysis](images/user_behaviour.png)
+    
 ## Conclusions
+![Recommendations](images/recommendations.png)
+
 ### Collaborative Filtering
 I created 2 user-based Collaborative Filtering RS via PySpark and Surprise. PySpark, while slower, had a much better RMSE rate and would thus be my preferred model if I wanted to recommend books by user. PearsonR was the only item-based Collaborative Filtering RS that I built but I was satisfied with the results. If I were to continue with this project, I would further investigate item-based models and look for an alternative method of evaluation.
 
