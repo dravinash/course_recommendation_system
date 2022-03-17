@@ -1,6 +1,26 @@
 # Building a Course Recommendation System using Python
 
 ## Objective
+<div id="BBox" class="alert alert-success">
+    <h1 style="font-family:verdana;color:black;">Problem Statement</h1>
+    <p style="font-family:courier;color:black;">
+        <strong> You are given a dataset of users and their rating against few learning units. Taking this dataset into account, you need to design a recommendation system that would suggest the leanring units for the new users (not have any previous records).</strong>
+    </p>
+    <p style="font-family:courier;color:black;"><strong> Further Details </strong> </p>
+    <span style="font-family:courier;color:black;">
+        <ol>
+          <li>Learning Unit matrix containing the user's feedback on various Learning Units.</li>
+            <ol type="a">
+              <li>Here each column represents the rating a user has given for a learning unit</li>
+              <li>User identifier is email id</li>
+              <li>You will see NA when a user has not rated a learning unit.</li>
+            </ol>
+          <li>User profile matrix that contains the information about some existing users</li>
+          <li>User profile details of some future users for whom you want to recommend Learning Units.</li>
+        </ol> 
+   <p style="font-family:courier;color:black;"><strong> Challenge </strong></p>
+   <span style="font-family:courier;color:black;"> Analyze the above dataset (sheet #1 & #2) and design a Recommender system which will recommend 5 LUs (ranked) for each of the future user listed in the Sheet number 3. </span>
+<div>
 ![problem statement](images/problem_statement.png)
 Recommender systems have become a part of daily life for users of Amazon and Netflix and even social media. While some sites might use these systems to improve the customer experience (if you liked movie A, you might like movie B) or increase sales (customers who bought product C also bought product D), others are focused on customized advertising and suggestive marketing. As a book lover and former book store manager, I have always wondered where I can find good book recommendations that are both personalized to my interests and also capable of introducing me to new authors and genres. The purpose of this project is to create just such a recommender system (RS).
 
