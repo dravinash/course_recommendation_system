@@ -44,18 +44,12 @@ The test users (who are not enrolled in the system) is represented by green squa
 For the test users, if they don't fall into the existing industries, positions and departements then we use 0, rather than assigning the respective value.
 ![User behaviour analysis](images/user_behaviour.png)
     
-## Conclusions
+## Results
+These recommendations are based on the 5 neighbourhood configuration, we can further change the neighbourhood and see the change in results. Further matrix factorization and other approaches can be utilized to solve this problem. Tensorflow recommendation system is also a good tool for the fast development, they have serveral apis to support for the purpose.
 ![Recommendations](images/recommendations.png)
 
-### Collaborative Filtering
-I created 2 user-based Collaborative Filtering RS via PySpark and Surprise. PySpark, while slower, had a much better RMSE rate and would thus be my preferred model if I wanted to recommend books by user. PearsonR was the only item-based Collaborative Filtering RS that I built but I was satisfied with the results. If I were to continue with this project, I would further investigate item-based models and look for an alternative method of evaluation.
-
-### Content Filtering
-This portion of the project was most interesting to me because it allowed me to conduct text analysis. Looking at the results of my models, I believe that the tfidf model is most relevant but, as I indicated above, that is a matter of personal preference. It might be interesting to do additional research on the review text for each book, even conducting sentiment analysis to determine what percentage of reviews are positive vs. negative. My interaction with the data led me to believe that most people write positive reviews, but it could be helpful to identify the negative reviews and use those to negatively weight the books for recommendations. I could also conduct a live survey for users to try out the content filtering models and rate them, allowing me to better measure their success. One final thought for future investigation involves image classification. Goodreads provides a url to show the cover of most of its books, so it could be interesting to see if a model could be trained on the images to predict genre or even recommend titles.
-
-In all, I felt like this was a good choice for a practicum project. The problem was interesting to me and also advanced enough to challenge me to learn more about text analysis and machine learning algorithms used in recommendation engines. The data did involve some cleaning and prep, especially since I had to change datasets in Week 3, but it was not so time consuming that I did not get to spend adequate time on building and tuning the models. I was also able to improve my Python skills and learned how to use several packages that were new to me (Surprise, pandas_profiling, PySpark - I had limited experience).
-
 ## References:
+* https://www.tensorflow.org/recommenders
 * https://heartbeat.fritz.ai/recommender-systems-with-python-part-i-content-based-filtering-5df4940bd831
 * https://github.com/ArmandDS/jobs_recommendations/blob/master/job_analysis_content_recommendation.ipynb
 * https://github.com/MengtingWan/goodreads
