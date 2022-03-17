@@ -78,6 +78,5 @@ We used following packages to create our solution, they can be installed by runn
 * https://towardsdatascience.com/recommendation-systems-models-and-evaluation-84944a84fb8e
 * https://towardsdatascience.com/various-implementations-of-collaborative-filtering-100385c6dfe0
 * https://www.kaggle.com/robottums/hybrid-recommender-systems-with-surprise
-* https://www.kaggle.com/vchulski/tutorial-collaborative-filtering-with-pyspark
 * https://www.tutorialspoint.com/change-data-type-for-one-or-more-columns-in-pandas-dataframe-1
 * Han, J., Pei, J., & Kamber, M. (2011). Data mining: concepts and techniques. Elsevier.
