@@ -1,8 +1,9 @@
 # Building a Course Recommendation System using Python
 
 ## Objective
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <div id="BBox" class="alert alert-success">
-    <h1 style="font-family:verdana;color:black;">Problem Statement</h1>
+    <h2 style="font-family:verdana;color:black;">Problem Statement</h2>
     <p style="font-family:courier;color:black;">
         <strong> You are given a dataset of users and their rating against few learning units. Taking this dataset into account, you need to design a recommendation system that would suggest the leanring units for the new users (not have any previous records).</strong>
     </p>
