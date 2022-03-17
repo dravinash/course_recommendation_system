@@ -1,6 +1,5 @@
 # Building a Course Recommendation System using Python
 
-## Objective
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <div id="BBox" class="alert alert-success">
     <h2 style="font-family:verdana;color:black;">Problem Statement</h2>
@@ -22,22 +21,21 @@
    <p style="font-family:courier;color:black;"><strong> Challenge </strong></p>
    <span style="font-family:courier;color:black;"> Analyze the above dataset (sheet #1 & #2) and design a Recommender system which will recommend 5 LUs (ranked) for each of the future user listed in the Sheet number 3. </span>
 <div>
-![problem statement](images/problem_statement.png)
-Recommender systems have become a part of daily life for users of Amazon and Netflix and even social media. While some sites might use these systems to improve the customer experience (if you liked movie A, you might like movie B) or increase sales (customers who bought product C also bought product D), others are focused on customized advertising and suggestive marketing. As a book lover and former book store manager, I have always wondered where I can find good book recommendations that are both personalized to my interests and also capable of introducing me to new authors and genres. The purpose of this project is to create just such a recommender system (RS).
 
+<span> <strong> There are two approaches that we thought to utilize to solve this problem.</strong> </span>
 ### Collaborative Filtering vs. Content Filtering
-If an RS suggests items to a user based on past interactions between users and items, that system is known as a Collaborative Filtering system. In these recommendation engines, a user-item interactions matrix is created such that every user and item pair has a space in the matrix. That space is either filled with the user's rating of that item or it is left blank. This can be used for matrix factorization or nearest neighbor classification, both of which will be addressed when we develop our models. The important thing to remember with collaborative filtering is that user id, item id, and rating are the only fields required. Collaborative models can be user-based or item-based.
+If an recommendation system suggests items to a user based on past interactions between users and items, that system is known as a Collaborative Filtering system. In these recommendation engines, a user-item interactions matrix is created such that every user and item pair has a space in the matrix (shown in below image). That space is either filled with the user's rating of that item or it is left blank. This can be used for matrix factorization or nearest neighbor classification, we have used KNN to address this problem. The important thing to remember with collaborative filtering is that user id, item id, and rating are the only fields required. Collaborative models can be user-based or item-based.
 
-Content filtering, on the other hand, focuses exclusively on either the item or the user and does not need any information about interactions between the two. Instead, content filtering calculates the similarity between items or users using attributes of the items or users themselves. For my book data, I will use book reviews and text analysis to determine which books are most similar to books that I like and thus which books should be recommended (item based).
-
+Content filtering, on the other hand, focuses exclusively on either the item or the user and does not need any information about interactions between the two. Instead, content filtering calculates the similarity between items or users using attributes of the items or users themselves.
+    
+<span> <strong> We used collaborative filtering to address this problem.</strong> </span>
+![Dataset Representation](images/dataset.png)
 ## Data
-While there are many book datasets available to use, I decided to work with Goodreads Book data. There are several full Goodreads data sets available at the [UCSD Book Graph site](https://sites.google.com/eng.ucsd.edu/ucsdbookgraph/home) and I initially worked with this data to analyze metadata for books, authors, series, genres, reviews, and the interactions between users and items. Once I began building the models, I quickly realized that my dataset was too large. Rather than limit myself to just one genre, I chose to use the [Goodreads 10k data set](https://www.kaggle.com/zygmunt/goodbooks-10k/version/4), a subset of the full Goodreads data sets. This data set contains book metdata, ratings, book tags, and book shelves. 
-
-For full code, view the following files in this github:
-
-[EDA - full Goodreads authors, works, series, genres, interactions.ipynb](https://github.com/Reinalynn/Building-a-Book-Recommendation-System-using-Python/blob/master/Code/EDA%20-%20full%20Goodreads%20authors%2C%20works%2C%20series%2C%20genres%2C%20interactions.ipynb)   
-[Data prep - full Goodreads loading files, statistics, distributions.ipynb](https://github.com/Reinalynn/Building-a-Book-Recommendation-System-using-Python/blob/master/Code/Data%20prep%20-%20full%20Goodreads%20loading%20files%2C%20statistics%2C%20distributions.ipynb)
-
+The intersection of row and column shows the rating of the leanring unit given by that user (see the above image). For example user-1 has given 2.5 rating for the course-2. The Nan values are representing that the rating has not given by that user for that particular leanring unit. We replaced the Nan values by 0. 
+    
+We further tried to analyse, how the user voted for each course and their vote frequency. We can put the threhold to minimize the number of users (for example, we can consider only those users who have voted at least 8 times and the similarly minimize the number of courses by defining the constraint over the minimum rating for the course. The read line in the graphs represents these thresholds.
+![Dataset Representation](images/course_vs_votes.png)
+![Dataset Representation](images/users_vote_frequency.png)
 ### Collection, Cleaning and Analysis
 
 ##### Full Goodreads Dataset
