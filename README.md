@@ -49,6 +49,8 @@ These recommendations are based on the 5 neighbourhood configuration, we can fur
     
 ![Recommendations](images/recommendations.png)
 
+<span><strong><i>** we have changed the course name from german to english to understand the prediction results and also to analyze the data during the modelling process </i></strong></span>
+
 ## Dependencies
 We used following packages to create our solution, they can be installed by running the below commands. We used Python version 3.9.7
 * pip install pandas
