@@ -46,7 +46,16 @@ For the test users, if they don't fall into the existing industries, positions a
     
 ## Results
 These recommendations are based on the 5 neighbourhood configuration, we can further change the neighbourhood and see the change in results. Further matrix factorization and other approaches can be utilized to solve this problem. Tensorflow recommendation system is also a good tool for the fast development, they have serveral apis to support for the purpose.
+    
 ![Recommendations](images/recommendations.png)
+
+## Dependencies
+We used following packages to create our solution, they can be installed by running the below commands. We used Python version 3.9.7
+* pip install pandas
+* pip install numpy
+* pip install scipy
+* pip install sklearn
+* pip install matplotlib
 
 ## References:
 * https://www.tensorflow.org/recommenders
